@@ -11,13 +11,15 @@
     <link rel="stylesheet" href="normalize.css">
 
     <meta name="theme-color" content="#fafafa">
+
 </head>
 
 <body>
+    <h1 class="header__icon"> NON VERBAL COMMUNICATION </h1>
 
-    <header class="header">
+    <header class="header clearfix">
         <a href="" class="header__logo"> LOGO </a>
-        <a href="" class="header__icon"> NOTVERBALCOMMUNICATION </a>
+
 
         <ul class="header__menu">
             <li class="header__menu__item"><a href="">GALLERY</a></li>
@@ -26,6 +28,53 @@
         </ul>
 
     </header>
+
+    <div class="slidercontainer">
+        <div class="showSlide fade">
+            <img src="cover3.jpg" />
+            <div class="content">foto 1</div>
+        </div>
+        <div class="showSlide fade">
+            <img src="cover.jpg" />
+            <div class="content">foto 2</div>
+        </div>
+
+        <div class="showSlide fade">
+            <img src="cover1.jpg" />
+            <div class="content">foto 3</div>
+        </div>
+        <div class="showSlide fade">
+            <img src="cover2.jpg" />
+            <div class="content">foto 4</div>
+        </div>
+        <!-- Navigation arrows -->
+        <a class="left" onclick="nextSlide(-1)">❮</a>
+        <a class="right" onclick="nextSlide(1)">❯</a>
+    </div>
+
+    <script type="text/javascript">
+        var slide_index = 1;
+        displaySlides(slide_index);
+
+        function nextSlide(n) {
+            displaySlides(slide_index += n);
+        }
+
+        function currentSlide(n) {
+            displaySlides(slide_index = n);
+        }
+
+        function displaySlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("showSlide");
+            if (n > slides.length) { slide_index = 1 }
+            if (n < 1) { slide_index = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide_index - 1].style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
