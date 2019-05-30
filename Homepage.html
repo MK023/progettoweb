@@ -15,66 +15,229 @@
 </head>
 
 <body>
-    <h1 class="header__icon"> NON VERBAL COMMUNICATION </h1>
+    <h1 class="header__icon"> NON-VERBAL COMMUNICATION </h1>
 
     <header class="header clearfix">
-        <a href="" class="header__logo"> LOGO </a>
+        <img src="logo.png" alt="logo" class="header__logo">
 
 
         <ul class="header__menu">
-            <li class="header__menu__item"><a href="">GALLERY</a></li>
+            <li class="header__menu__item"><a href="Homepage.html">HOMEPAGE</a></li>
+            <li class="header__menu__item"><a href="Gallery.html">GALLERY</a></li>
             <li class="header__menu__item"><a href="">TRAINING</a></li>
             <li class="header__menu__item"><a href="">QUIZ</a></li>
         </ul>
 
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+        <div id="id02" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <div class="container">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label></div>
+
+                    <button type="submit">Login</button>
+
+                </div>
+
+                <div class="container">
+
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+
+            </form>
+        </div>
     </header>
 
-    <div class="slidercontainer">
-        <div class="showSlide fade">
-            <img src="cover3.jpg" />
-            <div class="content">foto 1</div>
-        </div>
-        <div class="showSlide fade">
-            <img src="cover.jpg" />
-            <div class="content">foto 2</div>
-        </div>
+    <script>
+        var i = 0; // Start point
+        var images = [];
+        var time = 5000;
 
-        <div class="showSlide fade">
-            <img src="cover1.jpg" />
-            <div class="content">foto 3</div>
-        </div>
-        <div class="showSlide fade">
-            <img src="cover2.jpg" />
-            <div class="content">foto 4</div>
-        </div>
-        <!-- Navigation arrows -->
-        <a class="left" onclick="nextSlide(-1)">❮</a>
-        <a class="right" onclick="nextSlide(1)">❯</a>
+        // Image List
+        images[0] = 'cover3.jpg';
+        images[1] = 'cover.jpg';
+        images[2] = 'cover1.jpg';
+        images[3] = 'cover2.jpg';
+
+        // Change Image
+        function changeImg(){
+            document.slide.src = images[i];
+
+            if(i < images.length - 1){
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("changeImg()", time);
+        }
+
+        window.onload = changeImg;
+
+    </script>
+
+    <section class="image">
+    <img id ="grandezza" name="slide">
+    </section>
+
+    <div class="Titoletto"><h1> CITAZIONE E DESCRIZIONE </h1></div>
+    <div class="clearfix">
+    <img class="sticky" src="paulino.jpg" alt="Avatar">
+    <div class="testo1">
+    <h2>Scroll Down</h2>
+    <p>Some example text..</p><br>
     </div>
 
+    <div class="testo">
+    <p><b>Scroll back up again to "remove" the sticky position.</b></p>
+    <p>La comunicazione non verbale (CNV) è un aspetto del comportamento umano che da sempre ha attirato l’attenzione e
+        l’interesse di molti sia in campo scientifico sia e soprattutto in campo sociale, nonché artistico, letterario,
+        mediatico, commerciale, ecc. Il fatto che si possa comunicare anche senza parlare affascina la nostra fantasia
+        e curiosità. Eppure, sembra che dimentichiamo che buona parte degli esseri viventi, soprattutto i vertebrati,
+        utilizza solo questo tipo di comunicazione. Inoltre, a livello evolutivo, gli esseri umani stessi
+        hanno utilizzato solo segnali non verbali per comunicare tra loro prima della nascita e invenzione
+        del linguaggio verbale. Non solo, a livello di sviluppo, ciascuno di noi ha utilizzato per comunicare solo
+        segnali corporei (sin dai primi mesi di vita), prima dell’apprendimento della lingua madre e poi di altre lingue.
+        Prima di iniziare a parlare di CNV è necessario trovare una definizione della stessa
+        (Bonaiuto & Maricchiolo, 2009). L’attributo “non verbale” indica “tutto ciò che non è parola”, cioè tutto ciò
+        che non è linguaggio verbale, che è considerato il mezzo più raffinato ed evoluto per relazionarsi.
+        La “comunicazione” è un interscambio dinamico, un invio e ricezione di informazioni, pensieri, atteggiamenti,
+        una condivisione e costruzione di significati. La “comunicazione non verbale” si potrebbe definire quindi
+        come una trasmissione di contenuti, costruzione e condivisione di significati che avviene a prescindere
+        dall’uso delle parole. La componente non verbale della comunicazione, infatti, comprende tutti gli aspetti
+        di messaggi diversi dalle parole. Infatti Greene (1980) preferisce usare la distinzione fra “comunicazione che
+        fa uso di parole” e “comunicazione che non ne fa uso”, anziché verbale e non verbale. Un'altra denominazione per
+        questa forma di comunicazione è “linguaggio del corpo” (bodily communication), o comunicazione corporea,
+        proprio perché molti dei segnali non verbali, come avremo modo di vedere, sono espressi mediante cenni e
+        movimenti di parti del corpo. Tale espressione, secondo alcuni autori (Kendon, 2004), sarebbe più corretta e
+        recentemente sta conoscendo una fortuna crescente rispetto a quella di CNV.
+        In questa sede ho preferito utilizzare la denominazione non verbale, comprendendo così anche i termini:
+        segnali non verbali, comportamenti non verbali, indicatori non verbali, ecc., in quanto farò riferimento
+        anche a codici e canali comunicativi non necessariamente corporei (es. gestione del tempo, ambiente
+        architettonico, ecc.). Infatti gli esseri umani, quando interagiscono, particolarmente in co-presenza,
+        in modo visibile, comunicano continuamente tra loro non soltanto contenuti verbali, fornendo così reciprocamente
+        informazioni circa le loro intenzioni, gli interessi, i sentimenti e le idee, che vogliano farlo o no.
+        Ad esempio, le posture, la distanza interpersonale, le direzioni di sguardo dei partecipanti durante una
+        conversazione forniscono molte informazioni sulla relazione tra le persone, la natura di tali relazioni, e il
+        livello e la forza del loro coinvolgimento nella relazione e nella situazione conversazionale. Le loro azioni,
+        intenzionali o meno, dirette verso oggetti, persone, ambiente circostante, o se stessi, forniscono, a chi ne
+        coglie la lettura, informazioni su scopi, obiettivi, interessi e motivazioni. Ci sono anche le azioni che sono
+        di per sé espressive, però. Così, da come le persone si avvicinano tra di loro o si allontanano, dai movimenti
+        del volto e degli arti, essi mostrano l'un l'altro sentimenti e stati emotivi, quali affetto, disprezzo,
+        indifferenza, preoccupazione, gratitudine; si sfidano o minacciano l'un l'altro; si sostengono, si conformano
+        l'un l'altro, o mostrano la paura, la gioia, l’imbarazzo e così via.
+        Come la comunicazione verbale (CV), la CNV è costituita da codici. “Un codice è un insieme di segnali che viene
+        solitamente trasmesso tramite un particolare mezzo o canale” (Burgoon, Guerrero, & Floyd, 2010, p. 19). Ci sono
+        circa sette o otto codici non verbali comunemente riconosciuti tra gli studiosi: cinesico, vocale, olfattivo,
+        aptico, prossemico, cronemico, codice legato all’aspetto fisico e al costruito (che riguarda l’intervento
+        artificiale dell’uomo sull’ambiente) (Guerrero & Farinelli 2009).
+        Il più ampiamente riconosciuto dei codici non verbali legati al corpo è la cinesica - ciò che è noto come
+        “il linguaggio del corpo” - che comprende i messaggi sulla base di movimenti del corpo, come le espressioni
+        facciali, i moti oculari, i gesti delle mani, la postura, l’orientazione del corpo e altri movimenti fisici.
+        La maggior parte di questi segnali sono quelli che vengono intesi come comunicazione corporea e che sono
+        utilizzati con finalità comunicativa ed espressiva (vedi più avanti le funzioni della CNV).
+    </p>
+    </div>
+    </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
     <script type="text/javascript">
-        var slide_index = 1;
-        displaySlides(slide_index);
-
-        function nextSlide(n) {
-            displaySlides(slide_index += n);
-        }
-
-        function currentSlide(n) {
-            displaySlides(slide_index = n);
-        }
-
-        function displaySlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("showSlide");
-            if (n > slides.length) { slide_index = 1 }
-            if (n < 1) { slide_index = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slide_index - 1].style.display = "block";
-        }
+        $(function() {
+            $(".ps span.image")
+                .click(function() {
+                    var ref = $(this).attr("href");
+                    if($("#" + ref).css('visibility') == 'hidden') {
+                        $("#" + ref).css('visibility','visible');
+                    } else {
+                        $("#" + ref).css('visibility','hidden');
+                    }
+                });
+        });
     </script>
+
+    <div class="contatti clearfix">
+    <div class="team-section"> <h1>
+        Our team
+    </h1>
+        <span class="border"></span>
+        <div class="ps">
+            <a href="#p1">
+                <img src="marco.jpg">
+            </a>
+            <a href="#p2">
+                <img src="claudio.jpg">
+            </a>
+        </div>
+    </div>
+
+    <div class="section" id="p1">
+        <span class="name"> Marco Bellingeri</span>
+        <span class="border"></span>
+        <p>Contact me: 20018634@studenti.uniupo.it</p>
+    </div>
+    <div class="section" id="p2">
+        <span class="name"> Claudio Rotunno</span>
+        <span class="border"></span>
+        <p>Contact me: 20019916@studenti.uniupo.it</p>
+    </div>
+    </div>
+
+
 
 </body>
 </html>
