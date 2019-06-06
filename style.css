@@ -51,6 +51,8 @@ body{background: #fff;}
 .Titoletto{
     text-align: center;
 }
+
+
 img.sticky {
     position: -webkit-sticky;
     position: sticky;
