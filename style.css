@@ -275,9 +275,78 @@ img.avatar {
     width: 100%;
 }
 
+/*galleria*/
+
+#titolo
+{
+    text-align: center;
+}
+
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
+
+
+/*gallery*/
+#gallery
+{
+    margin: 0;
+    background: #fff;
+}
+
+.container_gallery
+{
+    max-width: 1200px;
+    margin: auto;
+    background: #4169e1;
+    overflow: auto;
+}
+
+.galleria
+{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 390px;
+}
+
+.galleria img
+{
+    width: 100%;
+    height: auto;
+}
+
+.descrizione
+{
+    padding: 15px;
+    text-align: center;
+
+}
+
+/*training*/
+.mini_descrizione
+{
+    text-align: justify;
+}
+ol
+{
+    padding-left: 2em;
+}
+
+#foto_training
+{
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+
+.container_training
+{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
 

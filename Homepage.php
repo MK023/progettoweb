@@ -15,90 +15,10 @@
 </head>
 
 <body>
-    <h1 class="header__icon"> NON-VERBAL COMMUNICATION </h1>
 
-    <header class="header clearfix">
-        <img src="immagini_sito/logo.png" alt="logo" class="header__logo">
-
-
-        <ul class="header__menu">
-            <li class="header__menu__item"><a href="Homepage.html">HOMEPAGE</a></li>
-            <li class="header__menu__item"><a href="Gallery.html">GALLERY</a></li>
-            <li class="header__menu__item"><a href="">TRAINING</a></li>
-            <li class="header__menu__item"><a href="">QUIZ</a></li>
-        </ul>
-
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-
-        <div id="id01" class="modal">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <form class="modal-content" action="/action_page.php">
-                <div class="container">
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
-                    <hr>
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                    </label>
-
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-                    <div class="clearfix">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                        <button type="submit" class="signupbtn">Sign Up</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
-
-        <div id="id02" class="modal">
-
-            <form class="modal-content animate" action="/action_page.php">
-                <div class="imgcontainer">
-                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="immagini_sito/img_avatar2.png" alt="Avatar" class="avatar">
-                </div>
-
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-
-                    <div class="container">
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label></div>
-
-                    <button type="submit">Login</button>
-
-                </div>
-
-                <div class="container">
-
-                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
-
-                </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-
-            </form>
-        </div>
-    </header>
+    <?php
+    include 'Header.php';
+    ?>
 
     <script>
         var i = 0; // Start point
@@ -189,50 +109,9 @@
     </div>
     </div>
 
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(function() {
-            $(".ps span.image")
-                .click(function() {
-                    var ref = $(this).attr("href");
-                    if($("#" + ref).css('visibility') == 'hidden') {
-                        $("#" + ref).css('visibility','visible');
-                    } else {
-                        $("#" + ref).css('visibility','hidden');
-                    }
-                });
-        });
-    </script>
-
-    <div class="contatti clearfix">
-    <div class="team-section"> <h1>
-        Our team
-    </h1>
-        <span class="border"></span>
-        <div class="ps">
-            <a href="#p1">
-                <img src="immagini_sito/marco.jpg">
-            </a>
-            <a href="#p2">
-                <img src="immagini_sito/claudio.jpg">
-            </a>
-        </div>
-    </div>
-
-    <div class="section" id="p1">
-        <span class="name"> Marco Bellingeri</span>
-        <span class="border"></span>
-        <p>Contact me: 20018634@studenti.uniupo.it</p>
-    </div>
-    <div class="section" id="p2">
-        <span class="name"> Claudio Rotunno</span>
-        <span class="border"></span>
-        <p>Contact me: 20019916@studenti.uniupo.it</p>
-    </div>
-    </div>
+    <?php
+    include 'Footer.php';
+    ?>
 
 
 
